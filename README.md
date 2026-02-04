@@ -86,9 +86,9 @@ Copy and paste this entire command into your terminal:
 
 ```bash
 cd ~/Documents && \
-curl -L https://github.com/tomaibuilder/Claude-Code-AI-Operator-Course/archive/refs/tags/v1.0.0.zip -o ai-operator-course.zip && \
+curl -L "YOUR_GOOGLE_DRIVE_LINK" -o ai-operator-course.zip && \
 unzip ai-operator-course.zip && \
-cd Claude-Code-AI-Operator-Course-1.0.0 && \
+cd ai-operator-course && \
 claude
 ```
 
@@ -107,32 +107,21 @@ Once Claude Code is running, type: **"Start Lesson 1.1"**
 This demonstrates Claude Code's core principle: describe what you want, Claude handles implementation.
 
 1. Open terminal and type `claude`
-2. Tell Claude: *"Download the course materials from https://github.com/tomaibuilder/Claude-Code-AI-Operator-Course/archive/refs/tags/v1.0.0.zip and extract it to a folder called ai-operator-course in my Documents folder"*
+2. Tell Claude: *"Download the course materials from [YOUR_GOOGLE_DRIVE_LINK] and extract it to a folder called ai-operator-course in my Documents folder"*
 3. Watch Claude work
 4. Exit and navigate: `exit`, then `cd ~/Documents/ai-operator-course && claude`
 
 ---
 
-### Option 3: Manual Download
+### Option 3: Manual Download (Recommended for Windows)
 
 Sometimes simple is better.
 
-1. [**Download the course ZIP**](https://github.com/tomaibuilder/Claude-Code-AI-Operator-Course/archive/refs/tags/v1.0.0.zip)
+1. [**Download the course ZIP**](YOUR_GOOGLE_DRIVE_LINK)
 2. Extract it to your Documents folder
 3. Open terminal in that folder and run `claude`
 
-**Windows users:** This is your cleanest path.
-
----
-
-### Option 4: Git Clone (For Technical Users)
-
-```bash
-cd ~/Documents && \
-git clone https://github.com/tomaibuilder/Claude-Code-AI-Operator-Course.git && \
-cd Claude-Code-AI-Operator-Course && \
-claude
-```
+**This is the cleanest path for most students.**
 
 ---
 

@@ -16,9 +16,9 @@ Copy this entire command, paste it into your terminal, press Enter:
 
 ```bash
 cd ~/Documents && \
-curl -L https://github.com/tomaibuilder/Claude-Code-AI-Operator-Course/archive/refs/tags/v1.0.0.zip -o ai-operator-course.zip && \
+curl -L "YOUR_GOOGLE_DRIVE_LINK" -o ai-operator-course.zip && \
 unzip ai-operator-course.zip && \
-cd Claude-Code-AI-Operator-Course-1.0.0 && \
+cd ai-operator-course && \
 claude
 ```
 
@@ -33,7 +33,7 @@ It downloads everything, extracts it, and launches Claude Code in the course fol
 This is actually how you'll work from now on—describe what you want, Claude handles the rest.
 
 1. Open your terminal and type `claude`
-2. Tell it: *"Download the course materials from https://github.com/tomaibuilder/Claude-Code-AI-Operator-Course/archive/refs/tags/v1.0.0.zip and extract it to a folder called ai-operator-course in my Documents folder"*
+2. Tell it: *"Download the course materials from [YOUR_GOOGLE_DRIVE_LINK] and extract it to a folder called ai-operator-course in my Documents folder"*
 3. Watch it work
 4. Type `exit`, then `cd ~/Documents/ai-operator-course && claude`
 
@@ -45,7 +45,7 @@ You just gave Claude its first real task. It won't be the last.
 
 Sometimes simple is better.
 
-1. Download the ZIP file: **github.com/tomaibuilder/Claude-Code-AI-Operator-Course/releases**
+1. Click the download link provided in your course materials
 2. Extract it to your Documents folder
 3. Follow the next slide to open Claude Code from that folder
 
@@ -66,7 +66,7 @@ Then type `claude` and press Enter.
 
 **Or from the terminal:**
 ```bash
-cd ~/Documents/Claude-Code-AI-Operator-Course-1.0.0
+cd ~/Documents/ai-operator-course
 claude
 ```
 
@@ -98,7 +98,7 @@ Just follow along and respond when prompted.
 Yes. Just remember the path when you run the `cd` command.
 
 **"What if the download fails?"**
-Grab it manually from the GitHub releases page: **github.com/tomaibuilder/Claude-Code-AI-Operator-Course/releases**
+Check your course materials for the direct download link, or contact support.
 
 **"Can I pause and come back later?"**
 Absolutely. Navigate back to the course folder, run `claude`, and tell it to continue where you left off.
