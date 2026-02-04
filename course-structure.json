@@ -1,0 +1,176 @@
+{
+  "course": {
+    "name": "Claude Code for AI Operators",
+    "code": "ccao",
+    "version": "1.0.0",
+    "author": "Tom Crawshaw",
+    "description": "Learn to investigate, identify, and build real automations using Claude Code"
+  },
+  "modules": [
+    {
+      "id": "1",
+      "name": "AI Operator Fundamentals",
+      "description": "Master Claude Code for automation and process improvement work",
+      "lessons": [
+        {
+          "id": "1.1",
+          "name": "Introduction & The AI Operator Role",
+          "path": "lesson-modules/1.1-introduction/CLAUDE.md",
+          "description": "Welcome, scenario reveal, automation mindset, OpCode setup",
+          "duration": "20-30 min"
+        },
+        {
+          "id": "1.2",
+          "name": "Investigating Manual Processes",
+          "path": "lesson-modules/1.2-investigating-processes/CLAUDE.md",
+          "description": "Navigate messy docs, extract opportunities, create automation map",
+          "duration": "30-40 min"
+        },
+        {
+          "id": "1.3",
+          "name": "Working with Data & APIs",
+          "path": "lesson-modules/1.3-data-and-apis/CLAUDE.md",
+          "description": "Parse CSV/JSON, connect to Airtable, Google Sheets, transform data",
+          "duration": "40-50 min"
+        },
+        {
+          "id": "1.4",
+          "name": "Introduction to MCPs",
+          "path": "lesson-modules/1.4-introduction-to-mcps/CLAUDE.md",
+          "description": "Install MCPs, extend capabilities, optional Synta for n8n",
+          "duration": "30-40 min"
+        },
+        {
+          "id": "1.5",
+          "name": "Agents & Parallel Processing",
+          "path": "lesson-modules/1.5-agents/CLAUDE.md",
+          "description": "Use agents for API research, parallel processing, faster reports",
+          "duration": "30-40 min"
+        },
+        {
+          "id": "1.6",
+          "name": "Custom Sub-Agents for Operations",
+          "path": "lesson-modules/1.6-custom-sub-agents/CLAUDE.md",
+          "description": "Build Process Analyzer and API Expert agents, persistent helpers",
+          "duration": "30-40 min"
+        },
+        {
+          "id": "1.7",
+          "name": "CLAUDE.md: Your Automation Playbook",
+          "path": "lesson-modules/1.7-claude-md/CLAUDE.md",
+          "description": "Document patterns, create standards, build institutional knowledge",
+          "duration": "30-40 min"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Building Real Automations",
+      "description": "Build production-ready automations from scratch",
+      "lessons": [
+        {
+          "id": "2.1",
+          "name": "Automation Design & Planning",
+          "path": "lesson-modules/2.1-design-planning/CLAUDE.md",
+          "description": "From manual process to automation spec, requirements gathering",
+          "duration": "30-40 min"
+        },
+        {
+          "id": "2.2",
+          "name": "Project 1: PDF Invoice Processing",
+          "path": "lesson-modules/2.2-pdf-processing/CLAUDE.md",
+          "description": "Local PDF folder → Airtable, extract data, error handling",
+          "duration": "60-90 min",
+          "deliverable": "Working Python script processing invoices"
+        },
+        {
+          "id": "2.3",
+          "name": "Project 2: Google Drive Automation",
+          "path": "lesson-modules/2.3-drive-automation/CLAUDE.md",
+          "description": "Watch Drive folder, auto-process PDFs, scheduled automation",
+          "duration": "60-90 min",
+          "deliverable": "Continuous automation monitoring Drive"
+        },
+        {
+          "id": "2.4",
+          "name": "Project 3: Invoice Upload Web App",
+          "path": "lesson-modules/2.4-web-app/CLAUDE.md",
+          "description": "Build upload interface, process backend, deploy to Vercel",
+          "duration": "90-120 min",
+          "deliverable": "Live web app URL anyone can use"
+        },
+        {
+          "id": "2.5",
+          "name": "Version Control with GitHub",
+          "path": "lesson-modules/2.5-github/CLAUDE.md",
+          "description": "GitHub basics, setup repo, commit code, create documentation",
+          "duration": "40-50 min",
+          "deliverable": "GitHub repo with all automations"
+        },
+        {
+          "id": "2.6",
+          "name": "Advanced: Multi-Step Automation",
+          "path": "lesson-modules/2.6-advanced/CLAUDE.md",
+          "description": "Chain APIs, complex workflows, monitoring (optional)",
+          "duration": "60-90 min",
+          "deliverable": "Student's choice automation",
+          "optional": true
+        },
+        {
+          "id": "2.7",
+          "name": "Documentation & Handoff",
+          "path": "lesson-modules/2.7-documentation/CLAUDE.md",
+          "description": "Create runbooks, train users, maintainable library",
+          "duration": "30-40 min",
+          "deliverable": "Complete automation portfolio"
+        }
+      ]
+    }
+  ],
+  "scenario": {
+    "company": "Precision Manufacturing Co.",
+    "role": "AI Operations Lead",
+    "challenge": "200 employees drowning in manual processes",
+    "departments": [
+      "Finance (invoice processing)",
+      "Sales Operations (data sync)",
+      "Customer Service (repetitive emails)",
+      "Inventory Management (spreadsheet chaos)",
+      "HR (manual onboarding)"
+    ],
+    "goal": "Identify automation opportunities and build working solutions"
+  },
+  "technologies": {
+    "required": [
+      "Claude Code",
+      "OpCode or text editor",
+      "Python 3.8+",
+      "Airtable (free tier)",
+      "Google Drive/Sheets API (free)"
+    ],
+    "setup_during_course": [
+      "GitHub account",
+      "Vercel account (free tier)"
+    ],
+    "optional": [
+      "Synta account (n8n MCP)",
+      "Node.js"
+    ]
+  },
+  "student_deliverables": {
+    "module_1": [
+      "Process investigation report",
+      "Automation opportunity map",
+      "Custom AI operator sub-agents",
+      "CLAUDE.md automation playbook"
+    ],
+    "module_2": [
+      "PDF invoice processor (local)",
+      "Google Drive automation (cloud)",
+      "Invoice upload web app (deployed)",
+      "Student's choice automation",
+      "GitHub repo with documentation",
+      "Runbooks for each automation"
+    ]
+  }
+}
