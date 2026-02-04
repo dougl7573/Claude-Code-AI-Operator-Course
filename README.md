@@ -76,13 +76,103 @@ Build production-ready automations
 
 ---
 
-## 🚀 How to Start
+## 🚀 Download & Start the Course
 
-1. **Clone or download** this repository
-2. **Open in OpCode** (or your preferred editor)
-3. **Navigate to** `lesson-modules/1.1-introduction/`
-4. **Open** `CLAUDE.md` in Claude Code
-5. **Follow along** - Claude will guide you step-by-step!
+**Time to Complete:** 5 minutes
+
+### Option 1: One-Line Command (Recommended - Mac/Linux)
+
+Copy and paste this entire command into your terminal:
+
+```bash
+cd ~/Documents && \
+curl -L https://github.com/tomaibuilder/Claude-Code-AI-Operator-Course/archive/refs/tags/v1.0.0.zip -o ai-operator-course.zip && \
+unzip ai-operator-course.zip && \
+cd Claude-Code-AI-Operator-Course-1.0.0 && \
+claude
+```
+
+**What this does:**
+- Downloads the complete course
+- Extracts it to your Documents folder
+- Opens Claude Code in the course directory
+- You're ready to start learning!
+
+Once Claude Code is running, type: **"Start Lesson 1.1"**
+
+---
+
+### Option 2: Let Claude Do It
+
+This demonstrates Claude Code's core principle: describe what you want, Claude handles implementation.
+
+1. Open terminal and type `claude`
+2. Tell Claude: *"Download the course materials from https://github.com/tomaibuilder/Claude-Code-AI-Operator-Course/archive/refs/tags/v1.0.0.zip and extract it to a folder called ai-operator-course in my Documents folder"*
+3. Watch Claude work
+4. Exit and navigate: `exit`, then `cd ~/Documents/ai-operator-course && claude`
+
+---
+
+### Option 3: Manual Download
+
+Sometimes simple is better.
+
+1. [**Download the course ZIP**](https://github.com/tomaibuilder/Claude-Code-AI-Operator-Course/archive/refs/tags/v1.0.0.zip)
+2. Extract it to your Documents folder
+3. Open terminal in that folder and run `claude`
+
+**Windows users:** This is your cleanest path.
+
+---
+
+### Option 4: Git Clone (For Technical Users)
+
+```bash
+cd ~/Documents && \
+git clone https://github.com/tomaibuilder/Claude-Code-AI-Operator-Course.git && \
+cd Claude-Code-AI-Operator-Course && \
+claude
+```
+
+---
+
+### Open Claude Code in the Course Folder
+
+**Important:** Claude only sees files in the folder where you launch it. Always start Claude Code from the course folder.
+
+**From File Explorer:**
+- Navigate to your Documents folder → `ai-operator-course` (or `Claude-Code-AI-Operator-Course`)
+- Right-click the folder and select "New Terminal at Folder"
+- Type `claude` and press Enter
+
+**From Terminal:**
+```bash
+cd ~/Documents/Claude-Code-AI-Operator-Course
+claude
+```
+
+---
+
+### Start Your First Lesson
+
+Once Claude Code is running, just say:
+
+**"Start Lesson 1.1"**
+
+Claude will begin teaching you interactively. Follow along and respond when prompted.
+
+---
+
+### Common Questions
+
+**"Can I change the download location?"**
+Yes, just remember the path for the `cd` command.
+
+**"What if the download fails?"**
+Try manual download from [GitHub Releases](https://github.com/tomaibuilder/Claude-Code-AI-Operator-Course/releases).
+
+**"Can I pause and come back later?"**
+Absolutely! Just navigate back to the course folder, run `claude`, and tell it to continue where you left off.
 
 ---
 
