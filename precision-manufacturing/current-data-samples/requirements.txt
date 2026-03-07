@@ -1,0 +1,2 @@
+# PDF extraction and invoice pipeline
+pdfplumber>=0.10.0

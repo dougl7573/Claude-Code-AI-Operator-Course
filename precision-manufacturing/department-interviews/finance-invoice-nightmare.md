@@ -1,4 +1,4 @@
-# Finance Department Interview - Marcus Rodriguez
+precision-manufacturing/department-interviews/sales-process-notes.md# Finance Department Interview - Marcus Rodriguez
 
 **Date:** Your first week
 **Department:** Finance & Accounts Payable

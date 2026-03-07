@@ -1,0 +1,7 @@
+{
+  "enabledMcpjsonServers": [
+    "airtable",
+    "local-memory",
+    "github"
+  ]
+}

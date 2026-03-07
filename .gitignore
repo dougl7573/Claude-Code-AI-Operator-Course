@@ -65,3 +65,11 @@ yarn-error.log
 # Environment variables
 .env
 .env.local
+
+# Secrets (OAuth, Airtable - do not commit)
+credentials.json
+token.json
+*.pem
+
+# Bundled/copied deps (optional - omit to keep repo smaller)
+precision-manufacturing/current-data-samples/venv_deps/

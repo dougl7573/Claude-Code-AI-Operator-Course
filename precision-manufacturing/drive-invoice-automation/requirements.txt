@@ -1,0 +1,8 @@
+# Drive Invoice Watcher (Lesson 2.3)
+google-api-python-client>=2.0.0
+google-auth>=2.0.0
+google-auth-oauthlib>=1.0.0
+
+# Pipeline lives in ../current-data-samples and has its own deps (pdfplumber).
+# From this folder, install pipeline deps too if you run the watcher standalone:
+#   pip install -r ../current-data-samples/requirements.txt
