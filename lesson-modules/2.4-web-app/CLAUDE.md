@@ -554,24 +554,21 @@ ACTION: When confirmed working:
 - ✅ Integration: Airtable save functionality
 - ✅ Full flow: Upload → Process → Review → Save
 
-**"Now comes the exciting part: deploying it to production so anyone can use it."**
-
-**"But first, let's make sure your code is deployment-ready..."**
+**"Now let's make sure your code is clean and ready for the next step: getting it live on the internet."**
 
 ---
 
-## Preparing for Deployment
+## Cleaning Up Your Code
 
-**Before we deploy, we need to:**
+**Before we wrap up, let's make sure your app is well-organized:**
 
-1. **Add environment variable handling** (don't hardcode API keys)
+1. **Environment variable handling** (don't hardcode API keys)
 2. **Create a `.gitignore`** (don't commit secrets)
 3. **Write a `README.md`** (document how to use it)
-4. **Test one more time locally**
 
 ---
 
-STOP: Let's prepare for deployment.
+STOP: Let's clean up your code.
 
 **Task 1: Environment Variables**
 
@@ -610,164 +607,25 @@ node_modules/
 Ask Claude Code to generate a README that explains:
 - What the app does
 - How to run it locally
-- How to deploy it
 - What environment variables are needed
 
-**Do these three things, then tell me: "Deployment prep complete"**
+**Do these three things, then tell me: "Code cleanup complete"**
 
 ---
 
-USER: [Student completes deployment prep]
+USER: [Student completes code cleanup]
 
 ---
 
 ACTION: When complete:
 
-**"Perfect. Your code is clean and ready to deploy."**
+**"Perfect. Your code is clean, organized, and ready for the next big step."**
 
-**"Now let's push it to production. We're using Vercel (free tier)."**
+**"Right now your app only runs on your computer. Marcus can't use it from his desk, and nobody else can access it."**
 
----
+**"In the next lesson, we're going to change that. We'll set up GitHub (from scratch if needed), push your code there, and deploy your app to the internet with a real URL that anyone can open."**
 
-## Deploying to Vercel
-
-**Why Vercel?**
-- Free tier is generous
-- Deploys in minutes
-- Supports Python (Flask/FastAPI) and Next.js
-- Automatic HTTPS
-- Easy environment variable management
-- You get a live URL immediately
-
-**Alternatives:** Railway, Render, Heroku (but Vercel is simplest)
-
----
-
-STOP: Let's deploy to Vercel.
-
-**Step 1: Create a Vercel account**
-
-1. Go to [https://vercel.com](https://vercel.com)
-2. Sign up (free) - use your GitHub account for easy integration
-3. Tell me when you're logged in
-
----
-
-USER: [Student creates Vercel account]
-
----
-
-ACTION: When confirmed:
-
-**"Great! Now let's prepare your app for Vercel deployment."**
-
-**Step 2: Create `vercel.json` config**
-
-**For Flask:**
-```json
-{
-  "builds": [
-    {
-      "src": "backend/app.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "frontend/**",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "backend/app.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "frontend/$1"
-    }
-  ]
-}
-```
-
-**For Next.js:**
-(No config needed - Vercel auto-detects Next.js)
-
-**Step 3: Push to GitHub** (if not already)
-
-You'll need your code in a GitHub repo for Vercel to deploy it.
-
-**Quick setup:**
-```bash
-git init
-git add .
-git commit -m "Initial commit - invoice upload web app"
-gh repo create invoice-webapp --public --source=. --remote=origin --push
-```
-
-**Tell me when your code is on GitHub.**
-
----
-
-USER: [Student pushes to GitHub]
-
----
-
-ACTION: When pushed:
-
-**"Excellent! Now let's deploy."**
-
-**Step 4: Deploy via Vercel Dashboard**
-
-1. Go to Vercel dashboard
-2. Click "Add New" → "Project"
-3. Import your GitHub repository
-4. Vercel will detect the framework automatically
-5. **IMPORTANT:** Add environment variables:
-   - `AIRTABLE_TOKEN` = your token
-   - `AIRTABLE_BASE_ID` = your base ID
-6. Click "Deploy"
-
-**Vercel will:**
-- Build your app
-- Deploy it
-- Give you a live URL (something like `invoice-webapp-xyz.vercel.app`)
-
-**This takes 2-3 minutes.**
-
-**Tell me when the deployment finishes and share the URL.**
-
----
-
-USER: [Student deploys and shares URL]
-
----
-
-ACTION: When deployed:
-
-**"CONGRATULATIONS! You just deployed your first production web app!"**
-
-**"Let's test it:"**
-
-1. Open the URL Vercel gave you
-2. Upload a sample invoice
-3. Watch it process
-4. Click "Save to Airtable"
-5. Check your Airtable base
-
-**If it works:**
-**"This is HUGE. You now have a shareable URL that anyone can use."**
-
-**"Text that link to a friend. Have them upload an invoice. Watch it work. That's what makes automation real."**
-
-**If there are errors:**
-- Check Vercel logs (Functions tab → View logs)
-- Common issues:
-  - Environment variables not set correctly
-  - PDF processing library not installed (add to `requirements.txt`)
-  - CORS issues (add CORS headers)
-- We'll debug together
-
-**Once working:** "Let's talk about what you just accomplished..."
+**"But first, let's appreciate what you built locally..."**
 
 ---
 
@@ -779,23 +637,15 @@ You went from "I want to automate invoice processing" to:
 
 ✅ **A working local script** (Lesson 2.2)
 ✅ **A cloud automation** (Lesson 2.3, if you did it)
-✅ **A deployed web app with a shareable URL** (this lesson)
+✅ **A working web app** (this lesson)
 
-**This is now a production tool.**
+**This is a real tool.** Right now it runs on your computer. In the next lesson, we'll deploy it to the internet so Marcus can text the link to his entire team and anyone can use it from their phone or computer.
 
-Marcus (Finance Lead) can text this link to his entire team. Anyone can:
-- Open it on their phone or computer
-- Upload an invoice
-- Review the extracted data
-- Save it to Airtable
-
-**No technical knowledge required. No "ask Tom to run the script" friction.**
-
-**This is what "automation" actually means in a business context:**
-- Self-service tools
-- Accessible to non-technical users
-- Deployed and maintained
-- Documented and handoff-ready
+**But the hard part is done.** You built a working web application with:
+- A clean upload interface
+- Backend processing logic
+- Airtable integration
+- Error handling
 
 **And you built it in a few hours (or days, if this was your first web app).**
 
@@ -862,7 +712,7 @@ STOP: Let's reflect on what you built.
 **Tell me:**
 1. What was the hardest part of this lesson?
 2. What surprised you about building a web app?
-3. Look at your deployed URL. How does it feel to have a live tool you can share?
+3. How does it feel to see your app working in the browser?
 4. Can you think of one other use case where you'd apply this pattern?
 
 Take a moment. This is a big milestone.
@@ -877,7 +727,7 @@ ACTION: When student responds:
 
 1. **Acknowledge their challenges:**
    - If they struggled with frontend/backend separation: "That's normal. The concept of 'client sends request, server responds' takes practice. You'll get more comfortable with it."
-   - If they struggled with deployment: "Deployment is where many developers struggle. You pushed through and got it live. That's huge."
+   - If they struggled with connecting frontend to backend: "That's the trickiest part. Getting two separate systems to talk to each other takes practice."
    - If they struggled with PDF processing: "PDF parsing is notoriously tricky. The fact that you got it working is impressive."
 
 2. **Address what surprised them:**
@@ -885,10 +735,10 @@ ACTION: When student responds:
    - Or they're surprised by how many moving pieces there are
    - Validate their reaction
 
-3. **Celebrate the deployed URL:**
-   - "That URL is yours. It's live. Anyone in the world can use it."
-   - "You didn't just 'learn' web development. You SHIPPED something."
-   - "Add this to your portfolio. Show it to employers. Share it on LinkedIn if you want."
+3. **Celebrate what they built:**
+   - "You built a working web app. That's real."
+   - "You didn't just 'learn' web development. You BUILT something functional."
+   - "In the next lesson, we'll get this deployed with a live URL you can share with anyone."
 
 4. **Discuss their use case idea:**
    - If they have a good idea: "That's perfect. You could build that with the exact same pattern."
@@ -900,9 +750,9 @@ ACTION: When student responds:
 
 ## Handoff & Documentation
 
-**Your web app is live, but your job isn't done.**
+**Your web app works, but before we deploy it, let's write the user guide.**
 
-You need to hand this off to the Finance team so they can actually use it.
+Writing documentation now (while it's fresh in your mind) is much easier than doing it later. Once we deploy in the next lesson, you'll have both the guide AND the live URL ready to hand off to Marcus and the Finance team.
 
 **Create a simple user guide:**
 
@@ -914,7 +764,7 @@ You need to hand this off to the Finance team so they can actually use it.
 Automatically extracts invoice data from PDFs and saves to Airtable.
 
 ## How to Use
-1. Open: https://invoice-webapp-xyz.vercel.app
+1. Open: [URL will be added after deployment]
 2. Click "Choose File" and select your invoice PDF
 3. Click "Process Invoice"
 4. Review the extracted data (edit if needed)
@@ -946,11 +796,8 @@ STOP: Create your handoff documentation.
 
 1. **Create a `USER_GUIDE.md`** in your project
 2. **Write simple instructions** for non-technical users
-3. **Include screenshots** (optional but helpful)
-4. **Add troubleshooting tips**
-5. **Share the URL and the guide with "Marcus"** (in this scenario)
-
-**For this exercise, just create the file. You can imagine sending it to Marcus.**
+3. **Add troubleshooting tips**
+4. **Leave a placeholder for the URL** (we'll fill it in after deployment in Lesson 2.5)
 
 **Tell me when you've created the user guide.**
 
@@ -984,7 +831,8 @@ It's **how to take an automation from working-on-your-computer to production-rea
 **The progression:**
 1. **Script** (Lesson 2.2) - Works on your machine, you run it manually
 2. **Scheduled Automation** (Lesson 2.3) - Runs automatically, still on your machine or server
-3. **Web App** (This lesson) - Self-service tool, deployed to cloud, shareable URL
+3. **Web App** (This lesson) - Self-service tool that anyone can use
+4. **Deployed App** (Lesson 2.5) - Live on the internet with a shareable URL
 
 **Each level increases:**
 - Accessibility (more people can use it)
@@ -1116,10 +964,8 @@ ACTION: When student responds:
 - [ ] I created a simple, clean frontend interface
 - [ ] I connected the frontend to the backend
 - [ ] I implemented the Airtable save functionality
-- [ ] I prepared my code for deployment (env vars, .gitignore, README)
-- [ ] I deployed the app to Vercel (or similar platform)
-- [ ] I have a live, shareable URL
-- [ ] I tested the app with real invoice PDFs
+- [ ] I cleaned up my code (env vars, .gitignore, README)
+- [ ] I tested the app locally with real invoice PDFs
 - [ ] I created user documentation for the Finance team
 - [ ] I tested at least 2 edge cases
 - [ ] I understand how to apply this pattern to other use cases
@@ -1136,20 +982,16 @@ ACTION: When student responds:
 
 1. **PDF Invoice Processor** - Local script that processes invoices from a folder
 2. **Google Drive Automation** - Cloud-based automation that watches for new files
-3. **Invoice Upload Web App** - Production tool with shareable URL
+3. **Invoice Upload Web App** - A working web application with a real user interface
 
-**You went from zero to three portfolio-worthy automations.**
+**You went from zero to three working automations.**
 
 **Each one demonstrates different skills:**
 - Script: File processing, data extraction, API integration
 - Cloud automation: Scheduling, cloud storage integration, error handling
-- Web app: Frontend development, backend APIs, deployment, user documentation
+- Web app: Frontend development, backend APIs, user documentation
 
-**You can now show employers:**
-- GitHub repo with working code
-- Live demo URL
-- Documentation proving you can hand off projects
-- Portfolio of automations that solve real problems
+**Next up:** We'll get everything onto GitHub and deploy your web app to the internet so anyone can use it.
 
 **This is what "AI Operator" means:**
 - You identify problems (invoice processing is manual and slow)
@@ -1165,23 +1007,15 @@ ACTION: When student responds:
 
 **What comes after this?**
 
-**Immediate next step:** Lesson 2.5 - Version Control with GitHub
-- Push all your projects to GitHub
-- Create READMEs for each
-- Build a portfolio of automations
+**Immediate next step:** Lesson 2.5 - GitHub Setup & Deployment
+- Set up GitHub from scratch (account, authentication, everything)
+- Push your web app code to GitHub
+- Deploy it to the internet with a live URL
+- Get a shareable link you can text to Marcus
 
-**After that:** You'll choose your own automation project
-- Apply these skills to a real use case in your job or life
-- Build something custom with Claude Code guiding you
-- Add it to your portfolio
+**After that:** You'll organize your portfolio and choose your own automation project.
 
-**Long-term:**
-- Keep building automations
-- Share your work (LinkedIn, portfolio site, etc.)
-- Look for "AI Operator" or "Automation Engineer" roles
-- Or use these skills in your current job to save hours
-
-**You're now equipped to build real automations. Go build.**
+**Your app works locally. Let's get it live.**
 
 ---
 
@@ -1190,8 +1024,8 @@ STOP: Final reflection for this lesson.
 **Tell me:**
 1. What's one thing you'll do differently in your next web app project based on what you learned here?
 2. What's one automation idea you have that you could build using this same pattern?
-3. On a scale of 1-10, how confident do you feel about building and deploying web apps now?
-4. What questions do you still have about web development or deployment?
+3. On a scale of 1-10, how confident do you feel about building web apps now?
+4. What questions do you still have about web development?
 
 Be honest. This is your chance to clarify anything before moving on.
 
@@ -1222,8 +1056,8 @@ ACTION: When student responds:
    - If they ask about scaling, security, advanced features: explain briefly but remind them to ship simple first
 
 5. **Wrap up:**
-   - "You just built and deployed a production web app. That's huge."
-   - "Take a moment to appreciate what you did. Then, when you're ready, move on to Lesson 2.5 and let's get everything into GitHub."
+   - "You just built a working web app. That's huge."
+   - "Take a moment to appreciate what you did. Then, when you're ready, move on to Lesson 2.5 where we'll set up GitHub and deploy this to the internet."
    - "See you there."
 
 ---
@@ -1236,11 +1070,6 @@ ACTION: When student responds:
 - Flask documentation: https://flask.palletsprojects.com/
 - Next.js documentation: https://nextjs.org/docs
 - MDN Web Docs (HTML/CSS/JS): https://developer.mozilla.org/
-
-**Deployment:**
-- Vercel documentation: https://vercel.com/docs
-- Railway: https://railway.app/
-- Render: https://render.com/
 
 **PDF Processing:**
 - pdfplumber docs: https://github.com/jsvine/pdfplumber
@@ -1257,29 +1086,26 @@ ACTION: When student responds:
 **"CORS error in browser"**
 - Solution: Add CORS headers to Flask (install `flask-cors`)
 
-**"Module not found" on Vercel**
+**"Module not found" error**
 - Solution: Make sure all dependencies are in `requirements.txt` or `package.json`
 
 **"Environment variables not working"**
-- Solution: Set them in Vercel dashboard (Settings → Environment Variables)
+- Solution: Make sure your `.env` file is in the right directory and `python-dotenv` is installed
 
 **"PDF extraction returns empty data"**
 - Solution: Check if PDF is text-based (not scanned image). Try different extraction library.
 
 **"Upload fails with large files"**
-- Solution: Add file size limit. Configure Vercel to handle larger files.
-
-**"App works locally but not on Vercel"**
-- Solution: Check Vercel logs for errors. Ensure all paths are correct (not hardcoded local paths).
+- Solution: Add file size limit in your Flask app configuration.
 
 ---
 
 **End of Lesson 2.4**
 
-**Next:** Lesson 2.5 - Version Control with GitHub
+**Next:** Lesson 2.5 - GitHub Setup & Deployment
 
 ---
 
-*You didn't just learn. You built. You deployed. You shipped.*
+*You didn't just learn. You built. And in the next lesson, you'll ship it to the world.*
 
 *That's what AI Operators do.*

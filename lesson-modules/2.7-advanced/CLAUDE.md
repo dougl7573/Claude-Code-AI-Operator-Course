@@ -1,8 +1,8 @@
-# Lesson 2.6 - Advanced: Multi-Step Automation (Optional)
+# Lesson 2.7 - Advanced: Multi-Step Automation (Optional)
 
 **Module 2: Building Real Automations**
 **Lesson Type:** Optional Advanced Project
-**Prerequisites:** Lessons 2.1-2.5 completed
+**Prerequisites:** Lessons 2.1-2.6 completed
 **Estimated Time:** 4-6 hours (spread across multiple sessions)
 
 ---
@@ -1679,7 +1679,7 @@ You've completed the advanced automation module.
 
 **This is portfolio-worthy work.** Show it proudly.
 
-**Next:** Move to Lesson 2.7 (Documentation & Handoff) or start building your next automation.
+**Next:** Move to Lesson 2.8 (Documentation & Handoff) or start building your next automation.
 
 ---
 

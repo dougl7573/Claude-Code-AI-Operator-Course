@@ -1,4 +1,4 @@
-# Lesson 2.7: Documentation & Handoff
+# Lesson 2.8: Documentation & Handoff
 
 **The Final Lesson: Making Your Work Immortal**
 
@@ -583,7 +583,7 @@ Precision-Manufacturing-Automations/
 
 ## Updating Your GitHub Repository
 
-You already put your code in GitHub in Lesson 2.5. Now you need to add all the documentation.
+You already put your code in GitHub in Lessons 2.5 and 2.6. Now you need to add all the documentation.
 
 **Your task:**
 
@@ -1236,20 +1236,22 @@ Let's take a moment to appreciate the full journey.
 - Made automation accessible to entire team
 - **Result:** Self-service tool for Finance
 
-**Lesson 2.5 - Version Control with GitHub**
+**Lesson 2.5 - GitHub Setup & Deployment**
 - Created GitHub repository
 - Committed all code
 - Documented everything
 - Built portfolio
 - **Result:** Professional GitHub profile
 
-**Lesson 2.6 - Advanced: Multi-Step Automation (Optional)**
+**Lesson 2.6 - GitHub Portfolio & Version Control**
+
+**Lesson 2.7 - Advanced: Multi-Step Automation (Optional)**
 - Chained multiple APIs
 - Built complex workflows
 - Demonstrated mastery
 - **Result:** Sophisticated automation
 
-**Lesson 2.7 - Documentation & Handoff (This Lesson)**
+**Lesson 2.8 - Documentation & Handoff (This Lesson)**
 - Created runbooks for all automations
 - Built training materials for users
 - Organized documentation library
@@ -1908,7 +1910,7 @@ Now go make companies more efficient, one automation at a time.
 
 ---
 
-**End of Lesson 2.7**
+**End of Lesson 2.8**
 **End of Module 2: Building Real Automations**
 **End of Course: Claude Code for AI Operators**
 
@@ -1999,7 +2001,7 @@ Handoffs are how you multiply yourself.
 
 ---
 
-## Success Criteria for Lesson 2.7
+## Success Criteria for Lesson 2.8
 
 Before considering the course complete, verify you can check these off:
 

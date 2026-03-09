@@ -1,4 +1,4 @@
-# Lesson 2.5: Version Control with GitHub
+# Lesson 2.6: GitHub Portfolio & Version Control
 
 **Your Automations Deserve a Home**
 
@@ -33,376 +33,88 @@ You need version control. You need GitHub.
 Here's what we're doing today: **Creating a professional portfolio that backs up your work and makes it shareable.**
 
 By the end of this lesson, you'll have:
-- A GitHub account (if you don't have one)
-- A repository with all your automation code
+- A repository with ALL your automation code organized professionally
 - Professional documentation that explains what you built
 - A shareable link you can send to employers, clients, or colleagues
-- Peace of mind that your work is backed up
+- A portfolio that shows real, working automations
 
-**Important:** This isn't a deep dive into git workflows, branching strategies, or collaboration patterns. This is "GitHub for AI Operators" - the essential skills you need to back up your work, document it, and share it.
+**Important:** You already set up GitHub and deployed your web app in Lesson 2.5. This lesson is about organizing ALL your automations into a professional portfolio.
 
 **What you'll learn:**
-- Git vs GitHub (the simple explanation)
-- Creating your first repository
+- Organizing multiple projects in one repository
+- Writing professional READMEs
 - Committing your automation files
-- Writing a professional README
-- Making your work shareable
+- Making your work shareable and portfolio-ready
 
 ---
 
-STOP: Let's check your starting point.
+**Quick check:** You should already have GitHub set up and authenticated from Lesson 2.5. If not, go back and complete that lesson first.
 
-**Answer these questions:**
-1. Have you used GitHub before? (Yes/No/A little)
-2. Do you have a GitHub account? (Yes/No/Not sure)
-3. Have you ever used git commands like `git add` or `git commit`? (Yes/No/What's that?)
-4. Do you understand what version control means? (Yes/No/Sort of)
-
-Be honest. There's no judgment here. Most non-developers haven't touched GitHub, and that's completely fine.
-
----
-
-USER: [Student responds with their GitHub experience level]
-
----
-
-ACTION: When student responds:
-
-1. **Acknowledge their experience level:**
-   - If they've used GitHub: "Great! This will be a quick refresher then. We'll focus on organizing your automation portfolio."
-   - If they're completely new: "Perfect. You're exactly who this lesson is designed for. I'll walk you through every single step."
-   - If they've heard of it but never used it: "You're in the majority. Most people outside of tech haven't used GitHub. That's about to change."
-
-2. **Set realistic expectations:**
-   - "This won't make you a git expert. That's not the goal."
-   - "You're learning the essential workflow: save your work, document it, share it."
-   - "By the end, you'll have a portfolio you can show employers or colleagues."
-   - "We're skipping advanced topics (branching, pull requests, merge conflicts). You can learn those later if needed."
-
-3. **Address their specific concerns:**
-   - If they mention being intimidated: "Totally understandable. GitHub can look complex. But what we're doing is actually very straightforward - you'll see."
-   - If they mention not being a developer: "You don't need to be. Plenty of non-developers use GitHub to store documentation, scripts, or projects."
-
-4. **Then say:** "Alright, let's start with the most basic question: What even IS GitHub?"
-
----
-
-## Git vs GitHub: The Simple Explanation
-
-People often confuse these two things. Let's clear it up.
-
-**Git** is version control software that runs on your computer.
-- Think of it like "Track Changes" for code
-- It creates save points (called "commits") of your work
-- You can go back to any previous save point
-- It works entirely on your computer
-
-**GitHub** is a website where you can store your git repositories.
-- Think of it like Dropbox or Google Drive for code
-- It backs up your work in the cloud
-- It makes your work shareable with others
-- It's the portfolio piece
-
-**The Relationship:**
-1. You use **git** on your computer to create save points
-2. You use **GitHub** to store those save points online
-3. Git is the tool, GitHub is the hosting service
-
-**Analogy:**
-- Git = Your camera (takes photos/saves moments)
-- GitHub = Instagram (stores and shares those photos)
-
-**Why This Matters for AI Operators:**
-- **Backup:** Your automations are safe even if your laptop dies
-- **Portfolio:** You can show employers/clients real code you've written
-- **Collaboration:** Others can download and use your automations
-- **Documentation:** Everything lives in one organized place
-- **Credibility:** A GitHub profile shows you build real things
-
-You're not becoming a git expert today. You're creating a professional home for your automations.
-
----
-
-## Creating Your GitHub Account
-
-Let's get you set up. This is completely free.
-
----
-
-STOP: Account creation.
-
-**If you already have a GitHub account:**
-- Tell me "I have an account" and we'll move to the next section
-
-**If you DON'T have a GitHub account:**
-- Go to https://github.com
-- Click "Sign up"
-- Follow the steps to create a free account
-- Choose a professional username (this will be in your portfolio URL)
-  - Good: `john-smith`, `jsmith-automation`, `yourname`
-  - Avoid: `coolcoder123`, `xxdestroyerxx`, anything unprofessional
-- Verify your email address
-- When done, come back and tell me "Account created"
-
-Take your time. I'll be here when you're ready.
-
----
-
-USER: [Student creates account or confirms they have one]
-
----
-
-ACTION: When student responds:
-
-**If they created a new account:**
-- "Great! Welcome to GitHub. That username will be part of your portfolio URL, so good choice."
-- "Before we create your first repository on GitHub, we need to set up git on your computer."
-
-**If they have an existing account:**
-- "Perfect. We'll use that account for your automation portfolio."
-- "Before we create the repository, let's make sure git is configured properly on your computer."
-
-**Then say:** "Next step: Making sure git is installed and configured on your computer. This is quick."
-
----
-
-## Installing and Configuring Git
-
-Git needs to be installed on your computer before you can use it. Let's check.
-
----
-
-STOP: Check if git is installed.
-
-**Open your terminal and run this command:**
+Let's verify you're good to go:
 
 ```bash
-git --version
+gh auth status
 ```
 
-**What you'll see:**
-- If git is installed: Something like `git version 2.39.0` (the number might be different)
-- If git is NOT installed: An error like "command not found"
-
-**Tell me what you see.**
+You should see checkmarks showing you're logged in. If not, run `gh auth login` and follow the prompts (covered in Lesson 2.5).
 
 ---
 
-USER: [Student runs command and reports result]
+## Creating Your Portfolio Repository
+
+In Lesson 2.5, you pushed your web app to GitHub as a single project. Now we're creating a **portfolio repository** that organizes ALL your automations in one place.
+
+**Why a portfolio repo?**
+- Shows the full scope of what you built (not just one project)
+- Professional presentation for employers or clients
+- Central documentation hub
+- Easy to share one link that shows everything
+
+A repository (or "repo") is basically a project folder on GitHub. We'll create one specifically for your Precision Manufacturing portfolio.
 
 ---
 
-ACTION: When student responds:
+STOP: Create the portfolio repository.
 
-**If git is already installed:**
-- "Perfect! Git is installed. Version [X] is fine for what we're doing."
-- "Now let's configure it with your name and email."
+**We're going to create a new folder, initialize it as a portfolio project, and then we'll push it to GitHub after we've added everything.**
 
-**If git is NOT installed:**
+**In your terminal:**
 
-**For Mac users:**
-- "No problem. Run this command to install git:"
-- `xcode-select --install`
-- "This will install Apple's command line tools, which includes git."
-- "It might take a few minutes. Come back when it's done."
-
-**For Windows users:**
-- "Go to https://git-scm.com/download/win"
-- "Download the installer and run it"
-- "Use all the default settings (just click Next through everything)"
-- "After installation, close and reopen your terminal"
-- "Then run `git --version` again to confirm"
-
-**For Linux users:**
-- "Run: `sudo apt-get install git` (Ubuntu/Debian)"
-- "Or: `sudo yum install git` (Fedora/RHEL)"
-
-**Once git is installed, say:** "Great! Now let's configure git with your information."
-
----
-
-## Configuring Git
-
-Git needs to know who you are so it can label your commits properly. This is a one-time setup.
-
----
-
-STOP: Configure git with your information.
-
-**Run these two commands in your terminal:**
-
-Replace "Your Name" with your actual name (or how you want to appear in commits):
-```bash
-git config --global user.name "Your Name"
-```
-
-Replace "your.email@example.com" with the email you used for GitHub:
-```bash
-git config --global user.email "your.email@example.com"
-```
-
-**Example:**
-```bash
-git config --global user.name "Sarah Chen"
-git config --global user.email "sarah.chen@example.com"
-```
-
-**To verify it worked, run:**
-```bash
-git config --global user.name
-git config --global user.email
-```
-
-This should display the name and email you just set.
-
-**Once you've done this, tell me "Git configured".**
-
----
-
-USER: [Student configures git]
-
----
-
-ACTION: When student responds:
-
-1. **Confirm success:**
-   - "Perfect! Git now knows who you are."
-   - "Every commit you make will be labeled with that name and email."
-
-2. **Explain what just happened:**
-   - "The `--global` flag means this configuration applies to all git repositories on your computer."
-   - "You only have to do this once per computer."
-
-3. **Transition:**
-   - "Now comes the fun part: creating your first repository on GitHub and uploading your automations."
-   - "This is where your portfolio starts to take shape."
-
----
-
-## Creating Your First GitHub Repository
-
-A repository (or "repo") is basically a project folder. You'll create one on GitHub, then connect it to your local automation files.
-
----
-
-STOP: Create a repository on GitHub.
-
-**Go to GitHub.com and log in.**
-
-**Click the "+" icon in the top right, then "New repository".**
-
-**Fill out the form:**
-
-1. **Repository name:** `precision-manufacturing-automations`
-   - Use lowercase, dashes instead of spaces
-   - Make it descriptive
-
-2. **Description:** "Invoice processing automations for Precision Manufacturing Co."
-   - This shows up on your profile
-
-3. **Public or Private?**
-   - **Public:** Anyone can see your code (good for portfolio)
-   - **Private:** Only you can see it (good if code has sensitive info)
-   - **My recommendation:** Public (assuming your code doesn't have API keys or sensitive data)
-
-4. **Initialize this repository with:**
-   - ✅ Check "Add a README file"
-   - ❌ Leave .gitignore as "None" (we'll create our own)
-   - ❌ Leave License as "None" (optional, can add later)
-
-5. **Click "Create repository"**
-
-**You'll land on your new repository page. Tell me when you're there.**
-
----
-
-USER: [Student creates repository]
-
----
-
-ACTION: When student responds:
-
-1. **Confirm they're on the repo page:**
-   - "Great! You're looking at your first repository."
-   - "The URL should look like: `github.com/[your-username]/precision-manufacturing-automations`"
-   - "This is the link you can share with others."
-
-2. **Explain what they're seeing:**
-   - "The README.md file is automatically displayed. This is like the homepage for your project."
-   - "Right now it just says the repo name. We'll make it much better."
-   - "The green '<> Code' button shows how to download this repo."
-
-3. **Next step:**
-   - "Now we need to clone this repository to your computer so you can add your automation files."
-   - "Cloning means creating a local copy on your machine that's connected to GitHub."
-
----
-
-## Cloning Your Repository
-
-You'll download your repository to your computer, add your automation files, then push them back to GitHub.
-
----
-
-STOP: Clone the repository to your computer.
-
-**On your GitHub repository page, click the green "<> Code" button.**
-
-**Make sure "HTTPS" is selected (not SSH).**
-
-**Click the copy icon to copy the URL.** It should look like:
-```
-https://github.com/your-username/precision-manufacturing-automations.git
-```
-
-**Now, in your terminal:**
-
-1. **Navigate to where you want to store this project:**
+1. **Navigate to where you keep your projects:**
    ```bash
    cd ~/Documents
    ```
-   (Or wherever you keep projects)
+   (Or wherever you prefer)
 
-2. **Clone the repository:**
+2. **Create the portfolio folder:**
    ```bash
-   git clone https://github.com/your-username/precision-manufacturing-automations.git
-   ```
-   (Paste the URL you copied)
-
-3. **Navigate into the new folder:**
-   ```bash
+   mkdir precision-manufacturing-automations
    cd precision-manufacturing-automations
    ```
 
-4. **Verify you're in the right place:**
+3. **Initialize git:**
    ```bash
-   ls -la
+   git init
    ```
-   You should see a README.md file and a hidden .git folder
 
-**Tell me when you've successfully cloned the repository.**
+4. **Create a placeholder README:**
+   ```bash
+   echo "# Precision Manufacturing Automations" > README.md
+   ```
+
+**Tell me when you've done this.**
 
 ---
 
-USER: [Student clones repository]
+USER: [Student creates the folder]
 
 ---
 
 ACTION: When student responds:
 
-**If successful:**
-- "Perfect! You now have a local copy of your GitHub repository."
-- "The `.git` folder (hidden) is what connects this folder to GitHub."
-- "Anything you add here can be pushed to GitHub."
-
-**If they got an error:**
-- Common issues:
-  - Wrong URL: "Make sure you copied the full URL from GitHub, including the .git at the end"
-  - Not logged in: "You might need to authenticate. GitHub should prompt you for username/password"
-  - Permission denied: "Make sure you're using HTTPS, not SSH"
-
-**Once they're successful, say:**
-- "Now for the exciting part: adding all your automation files to this repository."
+- "Perfect! You now have a local project folder ready for your automations."
+- "We'll add files, write documentation, and push it all to GitHub at the end."
+- "Let's start by organizing your automation files."
 
 ---
 
@@ -757,7 +469,7 @@ ACTION: When student responds:
 
 ## Pushing to GitHub
 
-The final step: uploading your commit to GitHub.
+Time to upload everything to GitHub. Since you already set up the `gh` CLI in Lesson 2.5, this is one command.
 
 ---
 
@@ -765,25 +477,28 @@ STOP: Push to GitHub.
 
 **Run this command:**
 ```bash
-git push origin main
+gh repo create precision-manufacturing-automations --public --source=. --remote=origin --push
 ```
 
-**What this means:**
-- `git push` = upload commits to GitHub
-- `origin` = the remote repository (your GitHub repo)
-- `main` = the branch name (the main version of your code)
+**What this single command does:**
+- Creates a new repository on your GitHub account
+- Sets it as public (good for portfolio)
+- Connects your local folder to GitHub
+- Pushes all your code up
 
-**You might be prompted to log in:**
-- Enter your GitHub username
-- Enter your password (or personal access token if you have 2FA enabled)
+**You should see:**
+```
+✓ Created repository your-username/precision-manufacturing-automations on GitHub
+✓ Added remote origin
+✓ Pushed commits to origin/main
+```
 
-**What you'll see:**
-- Progress as files upload
-- Confirmation that your branch is up to date
+**Now open it in your browser:**
+```
+https://github.com/your-username/precision-manufacturing-automations
+```
 
-**Then, go to your GitHub repository in your browser and refresh the page.**
-
-**Tell me what you see on GitHub now.**
+**Tell me what you see on GitHub.**
 
 ---
 
@@ -802,10 +517,14 @@ ACTION: When student responds:
   - When it was last updated"
 - "Your work is backed up. If your laptop dies, this is all safe."
 
-**If they got an error:**
-- Common issues:
-  - Authentication failed: "You might need to create a Personal Access Token. GitHub no longer accepts passwords for git operations. I'll walk you through this."
-  - Branch name mismatch: "Your branch might be called 'master' not 'main'. Try `git push origin master`"
+**If they got "repository already exists":**
+- "You already have a repo with that name. Either use a different name:"
+- `gh repo create pm-automations-portfolio --public --source=. --remote=origin --push`
+- "Or delete the old one on GitHub.com (Settings → Danger Zone → Delete)"
+
+**If authentication error:**
+- "Run `gh auth status` to check if you're still logged in."
+- "If not, run `gh auth login` again (same process from Lesson 2.5)."
 
 **Once successful:**
 - "Now comes the most important part: documentation. We need to write a README that explains what this project is."
@@ -1882,7 +1601,7 @@ This mindset makes you more effective in any technical or creative role.
 
 ---
 
-## Success Criteria for Lesson 2.5
+## Success Criteria for Lesson 2.6
 
 Before moving on, make sure you can honestly check these off:
 
@@ -1981,13 +1700,13 @@ You've built:
 
 **Optional Next Steps:**
 
-**Lesson 2.6 - Advanced: Multi-Step Automation (Optional)**
+**Lesson 2.7 - Advanced: Multi-Step Automation (Optional)**
 - Chain multiple APIs together
 - Build more complex workflows
 - Handle edge cases and errors
 - Create your own custom automation project
 
-**Lesson 2.7 - Documentation & Handoff (Optional)**
+**Lesson 2.8 - Documentation & Handoff (Optional)**
 - Create comprehensive runbooks
 - Train non-technical users
 - Build maintainable automation libraries
@@ -2038,9 +1757,9 @@ That's how you become truly proficient.
 
 ---
 
-**End of Lesson 2.5**
+**End of Lesson 2.6**
 
-**Next (Optional):** Lesson 2.6 - Advanced: Multi-Step Automation
+**Next (Optional):** Lesson 2.7 - Advanced: Multi-Step Automation
 
 ---
 
